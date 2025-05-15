@@ -33,9 +33,9 @@ function isValidDOB(dob) {
 app.post('/mock-check', (req, res) => {
   const { cardNumber, dateOfBirth } = req.body;
 
-  if (!cardNumber) {
-    return res.status(400).json({ success: false, message: 'Invalid card number' });
-  }
+  // if (!cardNumber) {
+  //   return res.status(400).json({ success: false, message: 'Invalid card number' });
+  // }
 
   if (!dateOfBirth || !isValidDOB(dateOfBirth)) {
     return res.status(400).json({ success: false, message: 'Invalid date of birth format. Use YYYY-MM-DD.' });
