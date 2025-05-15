@@ -25,10 +25,10 @@ function isValidCardNumber(cardNumber) {
   return sum % 10 === 0;
 }
 
-function isValidDOB(dob) {
-  // Expecting format: YYYY-MM-DD
-  return /^\d{4}-\d{2}-\d{2}$/.test(dob) && !isNaN(Date.parse(dob));
-}
+// function isValidDOB(dob) {
+//   // Expecting format: YYYY-MM-DD
+//   return /^\d{4}-\d{2}-\d{2}$/.test(dob) && !isNaN(Date.parse(dob));
+// }
 
 app.post('/mock-check', (req, res) => {
   const { cardNumber, dateOfBirth } = req.body;
