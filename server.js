@@ -37,9 +37,9 @@ app.post('/mock-check', (req, res) => {
   //   return res.status(400).json({ success: false, message: 'Invalid card number' });
   // }
 
-  if (!dateOfBirth || !isValidDOB(dateOfBirth)) {
-    return res.status(400).json({ success: false, message: 'Invalid date of birth format. Use YYYY-MM-DD.' });
-  }
+  // if (!dateOfBirth || !isValidDOB(dateOfBirth)) {
+  //   return res.status(400).json({ success: false, message: 'Invalid date of birth format. Use YYYY-MM-DD.' });
+  // }
 
   const result = Math.random() < 0.5;
   res.json({ success: true, result });
